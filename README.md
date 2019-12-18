@@ -15,6 +15,7 @@ The following functionality is completed:
 - [X] User can update profile 
 - [X] Imporved UI
 - [X] The user should switch between different tabs - viewing all posts , sell , wishlist, and profile tabs using tab bar controller
+
 The following **optional** features are for the future:
 - [X] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
 - [X] User can directly contact seller from the app. This requires implementation of a messaging service with in app
