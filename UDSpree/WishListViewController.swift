@@ -30,10 +30,7 @@ class WishListViewController: UIViewController {
             self.tvWhishList.reloadData()
         }
         
-        
     }
-    
-    
     
     func fetchWishList() {
         do {
@@ -94,7 +91,6 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedRow = items [indexPath.item]
         let detail = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
         detail.item = selectedRow
-        print("+++++++:::::")
         navigationController?.pushViewController(detail, animated: true)
     }
     

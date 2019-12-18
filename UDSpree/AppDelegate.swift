@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.server = "https://ud-spree.herokuapp.com/parse/"
         }
         Parse.initialize(with: parseConfig)
+        
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = .red
         return true
     }
 
