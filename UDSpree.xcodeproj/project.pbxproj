@@ -14,6 +14,7 @@
 		4DB92DAD23AACC06003F0018 /* LogInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB92DAC23AACC06003F0018 /* LogInButton.swift */; };
 		4DB92DB123AACE9F003F0018 /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB92DB023AACE9F003F0018 /* SignUpButton.swift */; };
 		4DB92DB423AAD070003F0018 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB92DB323AAD070003F0018 /* MyTextField.swift */; };
+		4DB92DB623AAD6D5003F0018 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB92DB523AAD6D5003F0018 /* ProfileViewController.swift */; };
 		4DEE9E7E23A6C4090072FA35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9E7D23A6C4090072FA35 /* AppDelegate.swift */; };
 		4DEE9E8023A6C4090072FA35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9E7F23A6C4090072FA35 /* SceneDelegate.swift */; };
 		4DEE9E8523A6C4090072FA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEE9E8323A6C4090072FA35 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		4DB92DAC23AACC06003F0018 /* LogInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButton.swift; sourceTree = "<group>"; };
 		4DB92DB023AACE9F003F0018 /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		4DB92DB323AAD070003F0018 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		4DB92DB523AAD6D5003F0018 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4DEE9E7A23A6C4090072FA35 /* UDSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEE9E7D23A6C4090072FA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DEE9E7F23A6C4090072FA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4D84892223A9CEFB00CE1373 /* DetailViewController.swift */,
 				4D84892423A9DDB700CE1373 /* SellViewController.swift */,
 				4D84892623AA147100CE1373 /* WishListViewController.swift */,
+				4DB92DB523AAD6D5003F0018 /* ProfileViewController.swift */,
 			);
 			path = UDSpree;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				4D84892723AA147100CE1373 /* WishListViewController.swift in Sources */,
 				4D84892523A9DDB700CE1373 /* SellViewController.swift in Sources */,
 				4DEE9EB423A6CCC10072FA35 /* TabBarController.swift in Sources */,
+				4DB92DB623AAD6D5003F0018 /* ProfileViewController.swift in Sources */,
 				4DEE9E8023A6C4090072FA35 /* SceneDelegate.swift in Sources */,
 				4DB92DAD23AACC06003F0018 /* LogInButton.swift in Sources */,
 			);
