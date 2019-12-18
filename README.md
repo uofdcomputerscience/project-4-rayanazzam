@@ -13,12 +13,20 @@ The following functionality is completed:
 - [X] User can retrieve contact infromation of seller by clicking on an item
 - [X] User can sell an item by choosing image for item from phone
 - [X] User can update profile 
+- [X] User can logout of profile
 - [X] Imporved UI
 - [X] The user should switch between different tabs - viewing all posts , sell , wishlist, and profile tabs using tab bar controller
 
 The following **optional** features are for the future:
-- [X] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
-- [X] User can directly contact seller from the app. This requires implementation of a messaging service with in app
+- [] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
+- [] User can directly contact seller from the app. This requires implementation of a messaging service with in app
+- [] email validation
+
+Test user for app:
+- username: "TestUser"
+- password: "Test123"
+
+Feel free to create your own user as well
 
 ## Video Walkthrough
 
