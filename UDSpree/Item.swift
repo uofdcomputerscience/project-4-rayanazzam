@@ -14,6 +14,7 @@ class Item {
     var itemImage: UIImage?
     var itemTitle: String?
     var itemPrice: String?
+    var itemDescription: String?
     var itemUser: PFUser?
     
     func setImage(image: UIImage) {
@@ -30,6 +31,10 @@ class Item {
     
     func setUser (user: PFUser) {
         self.itemUser = user
+    }
+    
+    func setDescription (description: String) {
+        self.itemDescription = description
     }
 }
 

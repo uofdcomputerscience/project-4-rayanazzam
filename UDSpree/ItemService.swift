@@ -2,7 +2,6 @@ import UIKit
 import Parse
 
 class ItemService {
-
     
     func fetchItems(completion: @escaping (([Item]) -> Void)) {
         var items: [Item] = []
@@ -14,8 +13,9 @@ class ItemService {
                         let item = Item()
                         item.setTitle(title: object["title"] as! String)
                         item.setPrice (price: object["price"] as! String)
+                        item.setDescription(description: object["description"] as! String)
                         item.setUser (user: object["user"] as! PFUser)
-                        
+                       
                         //attaching image
                         let itemImageFile = object["image"] as! PFFileObject
                         itemImageFile.getDataInBackground { (imageData: Data?, error: Error?) in
@@ -36,4 +36,7 @@ class ItemService {
             }
         }
     }
+    
+    
 }
+

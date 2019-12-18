@@ -52,4 +52,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(item: items[indexPath.item], tvItems: self.tvItemsList)
         return cell
     }
+    
+    func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let selectedRow = items [indexPath.item]
+        let detail = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+        detail.item = selectedRow
+        
+        navigationController?.pushViewController(detail, animated: true)
+    }
 }
+
+
