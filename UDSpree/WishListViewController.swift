@@ -24,8 +24,12 @@ class WishListViewController: UIViewController {
         tvWhishList.delegate = self
         tvWhishList.dataSource = self
         
-        fetchWishList()
-        getItems()
+        DispatchQueue.main.async {
+            self.fetchWishList()
+            self.getItems()
+            self.tvWhishList.reloadData()
+        }
+        
         
     }
     
@@ -45,7 +49,7 @@ class WishListViewController: UIViewController {
     func getItems () {
         for object in wishlist {
             do {
-                try object.fetchIfNeeded()
+                let object = try object.fetchIfNeeded()
                 let item = Item()
                 item.setTitle(title: object["title"] as! String)
                 item.setPrice (price: object["price"] as! String)
@@ -90,7 +94,8 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
         let selectedRow = items [indexPath.item]
         let detail = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
         detail.item = selectedRow
-        
+        print("+++++++:::::")
         navigationController?.pushViewController(detail, animated: true)
     }
+    
 }
