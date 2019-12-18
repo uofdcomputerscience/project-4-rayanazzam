@@ -31,9 +31,8 @@ Feel free to create your own user as well
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
-
-<img src='https://i.imgur.com/7TRjwsH.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Here's a link to a walkthrough of implemented user stories:
+https://i.imgur.com/GE95yWh.mp4
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
