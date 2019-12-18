@@ -18,30 +18,22 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        let weapons = ["Ray", "baba"]
-
-        // wishlist logic
-        /*
-        let user = PFUser.current()
-        user!["wishlist"] = weapons
-        user?.saveInBackground()
-         */
 
         tvItemsList.delegate = self
         tvItemsList.dataSource = self
-        
+        fetchItems()
+    }
+    
+    func fetchItems() {
         service.fetchItems { [weak self] (items) in
             DispatchQueue.main.async {
             self!.items = items
             self!.tvItemsList.reloadData()
             }
         }
-        
     }
 
 }
-
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,7 +41,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
-        cell.configure(item: items[indexPath.item], tvItems: self.tvItemsList)
+        cell.configure(item: items[indexPath.item])
         return cell
     }
     

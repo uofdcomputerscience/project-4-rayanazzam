@@ -2,6 +2,8 @@ import UIKit
 import Parse
 
 class ItemService {
+    var wishlist: [String] = []
+    let currUser = PFUser.current()
     
     func fetchItems(completion: @escaping (([Item]) -> Void)) {
         var items: [Item] = []
@@ -10,23 +12,24 @@ class ItemService {
             if error == nil {
                 if let returnedObjects = objects {
                     for object in returnedObjects {
-                        let item = Item()
-                        item.setTitle(title: object["title"] as! String)
-                        item.setPrice (price: object["price"] as! String)
-                        item.setDescription(description: object["description"] as! String)
-                        item.setUser (user: object["user"] as! PFUser)
-                       
-                        //attaching image
-                        let itemImageFile = object["image"] as! PFFileObject
-                        itemImageFile.getDataInBackground { (imageData: Data?, error: Error?) in
-                            if let error = error {
-                                print(error.localizedDescription)
-                                
-                            } else if let imageData = imageData {
-                                item.setImage(image: UIImage(data:imageData)!)
+                            let item = Item()
+                            item.setTitle(title: object["title"] as! String)
+                            item.setPrice (price: object["price"] as! String)
+                            item.setDescription(description: object["description"] as! String)
+                            item.setUser (user: object["user"] as! PFUser)
+                            item.setId(id: object.objectId!)
+                           
+                            //attaching image
+                            let itemImageFile = object["image"] as! PFFileObject
+                            itemImageFile.getDataInBackground { (imageData: Data?, error: Error?) in
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                    
+                                } else if let imageData = imageData {
+                                    item.setImage(image: UIImage(data:imageData)!)
+                                }
                             }
-                        }
-                        items.append(item)
+                            items.append(item)
                     }
                     
                     completion(items)
@@ -36,6 +39,41 @@ class ItemService {
             }
         }
     }
+    
+    func fetchItemsForCurrentUser (completion: @escaping ((Item) -> Void), id: String) {
+        var items: [Item] = []
+        
+        let query = PFQuery(className: "Item")
+        for id in wishlist {
+            query.getObjectInBackground(withId: id) { (object, error) in
+                if error == nil {
+                    let item = Item()
+                    item.setTitle(title: object!["title"] as! String)
+                    item.setPrice (price: object!["price"] as! String)
+                    item.setDescription(description: object!["description"] as! String)
+                    item.setUser (user: object!["user"] as! PFUser)
+                    item.setId(id: object!.objectId!)
+                    
+                    
+                     //attaching image
+                    /*let itemImageFile = object!["image"] as! PFFileObject
+                     itemImageFile.getDataInBackground { (imageData: Data?, error: Error?) in
+                         if let error = error {
+                             print(error.localizedDescription)
+                             
+                         } else if let imageData = imageData {
+                             item.setImage(image: UIImage(data:imageData)!)
+                         }
+                     }*/
+                    items.append(item)
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
     
     
 }

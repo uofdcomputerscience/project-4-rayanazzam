@@ -15,7 +15,7 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var lblPrice: UILabel!
     
     
-    func configure (item: Item, tvItems: UITableView) {
+    func configure (item: Item) {
         DispatchQueue.main.async {
             self.ivItem.image = item.itemImage
         }

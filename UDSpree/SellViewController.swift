@@ -29,23 +29,24 @@ class SellViewController: UIViewController {
         let description = tvDescription.text!
         
         if !validInputs (title: title, price: price, description: description) || ivUserImage.image == nil {
-            // show alert
-            return
+            displayErrorMessage()
+        } else {
+            let item = Item ()
+            item.setImage(image: ivUserImage.image!)
+            item.setTitle(title: title)
+            item.setPrice(price: price)
+            item.setDescription(description: description)
+            item.setUser(user: PFUser.current()!)
+                   
+            postItem(item: item)
         }
         
-        let item = Item ()
-        item.setImage(image: ivUserImage.image!)
-        item.setTitle(title: title)
-        item.setPrice(price: price)
-        item.setDescription(description: description)
-        item.setUser(user: PFUser.current()!)
-        
-        postItem(item: item)
+       
         
     }
     
     func validInputs (title: String, price: String, description: String) -> Bool {
-        return true
+        return !title.isEmpty && !price.isEmpty && Int(price) != nil
     }
     
     func postItem (item: Item){
@@ -88,6 +89,15 @@ class SellViewController: UIViewController {
         tfTitle.text = ""
         tvDescription.text = "Description ..."
         ivUserImage.image = nil
+    }
+    
+    func displayErrorMessage () {
+        let controller = UIAlertController (title: "Invalid inputs", message: "please provide valid inputs", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            self.dismiss (animated: true, completion: nil)
+        }
+        controller.addAction (okAction)
+        present(controller, animated:true)
     }
 }
 

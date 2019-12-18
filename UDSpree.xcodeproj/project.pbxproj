@@ -10,6 +10,7 @@
 		1B12B15A0D039CB1DEE320A7 /* Pods_UDSpree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFB8BE5D122FD221447E478 /* Pods_UDSpree.framework */; };
 		4D84892323A9CEFB00CE1373 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892223A9CEFB00CE1373 /* DetailViewController.swift */; };
 		4D84892523A9DDB700CE1373 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892423A9DDB700CE1373 /* SellViewController.swift */; };
+		4D84892723AA147100CE1373 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892623AA147100CE1373 /* WishListViewController.swift */; };
 		4DEE9E7E23A6C4090072FA35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9E7D23A6C4090072FA35 /* AppDelegate.swift */; };
 		4DEE9E8023A6C4090072FA35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9E7F23A6C4090072FA35 /* SceneDelegate.swift */; };
 		4DEE9E8523A6C4090072FA35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEE9E8323A6C4090072FA35 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		04D7B0277AB19635DF596636 /* Pods-UDSpreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDSpreeTests.release.xcconfig"; path = "Target Support Files/Pods-UDSpreeTests/Pods-UDSpreeTests.release.xcconfig"; sourceTree = "<group>"; };
 		4D84892223A9CEFB00CE1373 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4D84892423A9DDB700CE1373 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
+		4D84892623AA147100CE1373 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		4DEE9E7A23A6C4090072FA35 /* UDSpree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDSpree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DEE9E7D23A6C4090072FA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DEE9E7F23A6C4090072FA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4DEE9EBD23A70E220072FA35 /* ItemService.swift */,
 				4D84892223A9CEFB00CE1373 /* DetailViewController.swift */,
 				4D84892423A9DDB700CE1373 /* SellViewController.swift */,
+				4D84892623AA147100CE1373 /* WishListViewController.swift */,
 			);
 			path = UDSpree;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				4DEE9E7E23A6C4090072FA35 /* AppDelegate.swift in Sources */,
 				4DEE9EBE23A70E220072FA35 /* ItemService.swift in Sources */,
 				4DEE9EBA23A6DB460072FA35 /* Item.swift in Sources */,
+				4D84892723AA147100CE1373 /* WishListViewController.swift in Sources */,
 				4D84892523A9DDB700CE1373 /* SellViewController.swift in Sources */,
 				4DEE9EB423A6CCC10072FA35 /* TabBarController.swift in Sources */,
 				4DEE9E8023A6C4090072FA35 /* SceneDelegate.swift in Sources */,
