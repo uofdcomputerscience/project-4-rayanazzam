@@ -1,11 +1,9 @@
 # Project 4 - *UDSpree*
 
 **UDSpree** is an ios shopping app that is built for UD students to sell/buy items such as books, furniture, utensils, etc.
-It built using parse backend. 
+It is built using parse backend. 
 
-Time spent: **4** hours spent in total
-
-The following functionality is completed:
+The following user stories functionality is completed:
 
 - [X] User can create an account or log in to their previous account.
 - [X] User can scroll through a list of items that are up for sell".
@@ -22,6 +20,7 @@ The following **optional** features are for the future:
 - [] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
 - [] User can directly contact seller from the app. This requires implementation of a messaging service with in app
 - [] email validation
+- [] better error handling
 
 Test user for app:
 - username: "TestUser"
