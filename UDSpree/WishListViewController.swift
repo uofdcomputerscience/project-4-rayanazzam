@@ -15,6 +15,7 @@ class WishListViewController: UIViewController {
     let service = ItemService()
     var wishlist : [AnyObject] = []
     let currUser = PFUser.current()
+    private let refreshControl = UIRefreshControl()
     @IBOutlet weak var tvWhishList: UITableView!
     
     
@@ -24,12 +25,30 @@ class WishListViewController: UIViewController {
         tvWhishList.delegate = self
         tvWhishList.dataSource = self
         
+        if #available(iOS 10.0, *) {
+            tvWhishList.refreshControl = refreshControl
+        } else {
+            tvWhishList.addSubview(refreshControl)
+        }
+        
+        refreshControl.addTarget(self, action: #selector(refreshWishList(_:)), for: .valueChanged)
+        
         DispatchQueue.main.async {
             self.fetchWishList()
             self.getItems()
             self.tvWhishList.reloadData()
         }
         
+    }
+    
+    @objc private func refreshWishList(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.fetchWishList()
+            self.getItems()
+            self.tvWhishList.reloadData()
+        }
+        
+        self.refreshControl.endRefreshing()
     }
     
     func fetchWishList() {
@@ -44,6 +63,7 @@ class WishListViewController: UIViewController {
     }
     
     func getItems () {
+        self.items = []
         for object in wishlist {
             do {
                 let object = try object.fetchIfNeeded()

@@ -12,6 +12,7 @@ import Parse
 class HomeViewController: UIViewController {
     var items: [Item] = []
     let service = ItemService()
+    private let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var tvItemsList: UITableView!
     
@@ -22,6 +23,19 @@ class HomeViewController: UIViewController {
         tvItemsList.delegate = self
         tvItemsList.dataSource = self
         fetchItems()
+        
+        if #available(iOS 10.0, *) {
+            tvItemsList.refreshControl = refreshControl
+        } else {
+            tvItemsList.addSubview(refreshControl)
+        }
+        
+         refreshControl.addTarget(self, action: #selector(refreshItemList(_:)), for: .valueChanged)
+    }
+    
+    @objc private func refreshItemList(_ sender: Any) {
+        fetchItems()
+        self.refreshControl.endRefreshing()
     }
     
     func fetchItems() {

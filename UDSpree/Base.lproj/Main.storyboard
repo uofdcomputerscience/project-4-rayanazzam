@@ -36,7 +36,7 @@
                                     <action selector="onLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xF7-tT-myX"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test123" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-I2-fbZ" customClass="MyTextField" customModule="UDSpree" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GF9-I2-fbZ" customClass="MyTextField" customModule="UDSpree" customModuleProvider="target">
                                 <rect key="frame" x="30" y="467" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WRG-KA-iza"/>
@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TestUser" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jm-bJ-khK" customClass="MyTextField" customModule="UDSpree" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Jm-bJ-khK" customClass="MyTextField" customModule="UDSpree" customModuleProvider="target">
                                 <rect key="frame" x="30" y="392" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="OLT-JP-9Nu"/>

@@ -16,6 +16,7 @@ The following functionality is completed:
 - [X] User can logout of profile
 - [X] Imporved UI
 - [X] The user should switch between different tabs - viewing all posts , sell , wishlist, and profile tabs using tab bar controller
+- [X] User can pull to refresh items inside home page or wishlist
 
 The following **optional** features are for the future:
 - [] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
