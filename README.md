@@ -17,10 +17,10 @@ The following user stories functionality is completed:
 - [X] User can pull to refresh items inside home page or wishlist
 
 The following **optional** features are for the future:
-- [] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
-- [] User can directly contact seller from the app. This requires implementation of a messaging service with in app
-- [] email validation
-- [] better error handling
+- [ ] User can down or upvote a post. This allows certain posts to be filtered out or put on top per user interest (lots of cool applications for this)
+- [ ] User can directly contact seller from the app. This requires implementation of a messaging service with in app
+- [ ] email validation
+- [ ] better error handling
 
 Test user for app:
 - username: "TestUser"
