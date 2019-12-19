@@ -82,6 +82,8 @@ class LogInViewController: UIViewController {
     }
     
     func goToHomePage () {
+        tfUsername.text = ""
+        tfPassword.text = ""
         let viewController = storyboard?.instantiateViewController(identifier: "TabBarController") as! TabBarController
         present(viewController, animated: true)
     }

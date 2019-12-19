@@ -35,8 +35,8 @@ class ProfileViewController: UIViewController {
         PFUser.logOut()
         
         let viewController = storyboard?.instantiateViewController(identifier: "LogInViewController") as! LogInViewController
+        self.dismiss(animated: true)
         present(viewController, animated: true)
-        
     }
     
     func displayErrorMessage () {
