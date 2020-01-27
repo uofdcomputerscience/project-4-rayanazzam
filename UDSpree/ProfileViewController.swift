@@ -17,27 +17,26 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var tfPhoneNumber: UITextField!
     let currUser = PFUser.current()
     
-    
-    @IBAction func onUpdateInfo(_ sender: Any) {
-        let firstname = tfFirstname.text!
-        let lastname = tfLastname.text!
-        let email = tfEmail.text!
-        let phonenumber = tfPhoneNumber.text!
-        
-        if (firstname.isEmpty || lastname.isEmpty || email.isEmpty) {
-            displayErrorMessage()
-        } else {
-            updateUser (firstname: firstname, lastname: lastname, email: email, phonenumber: phonenumber)
-        }
+    @IBAction func onSave(_ sender: Any) {
+      let firstname = tfFirstname.text!
+      let lastname = tfLastname.text!
+      let email = tfEmail.text!
+      let phonenumber = tfPhoneNumber.text!
+      
+      if (firstname.isEmpty || lastname.isEmpty || email.isEmpty) {
+          displayErrorMessage()
+      } else {
+          updateUser (firstname: firstname, lastname: lastname, email: email, phonenumber: phonenumber)
+      }
     }
-    
     @IBAction func onLogOut(_ sender: Any) {
+        print("loggin out")
         PFUser.logOut()
-        
         let viewController = storyboard?.instantiateViewController(identifier: "LogInViewController") as! LogInViewController
-        self.dismiss(animated: true)
-        present(viewController, animated: true)
+       self.dismiss(animated: true)
+       present(viewController, animated: true)
     }
+    
     
     func displayErrorMessage () {
         let controller = UIAlertController (title: "Invalid inputs", message: "please provide valid inputs", preferredStyle: .alert)

@@ -5,9 +5,14 @@ class ItemService {
     var wishlist: [String] = []
     let currUser = PFUser.current()
     
-    func fetchItems(completion: @escaping (([Item]) -> Void)) {
+    func fetchItems(constraint: String, completion: @escaping (([Item]) -> Void)) {
         var items: [Item] = []
         let query = PFQuery(className: "Item")
+        if (constraint != "") {
+            query.whereKey("type", equalTo: constraint)
+        }
+        query.whereKey("sold", equalTo: false)
+        query.addDescendingOrder("createdAt")
         query.findObjectsInBackground { (objects, error) in
             if error == nil {
                 if let returnedObjects = objects {

@@ -17,6 +17,8 @@ class Item {
     var itemDescription: String?
     var itemUser: PFUser?
     var itemId: String?
+    var itemType: String?
+    var itemLocation: String?
     
     func setImage(image: UIImage) {
         self.itemImage = image
@@ -40,6 +42,14 @@ class Item {
     
     func setId (id: String) {
         self.itemId = id
+    }
+    
+    func setType (type: String) {
+        self.itemType = type
+    }
+    
+    func setLocation (location: String) {
+        self.itemLocation = location
     }
 }
 

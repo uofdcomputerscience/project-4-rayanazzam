@@ -24,7 +24,6 @@ class LogInButton: UIButton {
     
     
     func setupButton() {
-        backgroundColor     = Colors.brightRed 
         titleLabel?.font    = UIFont(name: Fonts.avenirNextCondensedDemiBold, size: 22)
         layer.cornerRadius  = frame.size.height/2
         setTitleColor(.white, for: .normal)

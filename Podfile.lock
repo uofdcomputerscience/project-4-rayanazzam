@@ -1,22 +1,26 @@
 PODS:
   - Bolts/Tasks (1.9.0)
+  - CarbonKit (2.3.1)
   - Parse (1.17.3):
     - Parse/Core (= 1.17.3)
   - Parse/Core (1.17.3):
     - Bolts/Tasks (~> 1.9)
 
 DEPENDENCIES:
+  - CarbonKit
   - Parse
 
 SPEC REPOS:
   trunk:
     - Bolts
+    - CarbonKit
     - Parse
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
   Parse: c1ad2a04d2cab2b54b6fb7da05f741abf2cf57d1
 
-PODFILE CHECKSUM: 0d3c6117d7466f9b172b92ecf8ce355e98b17dd0
+PODFILE CHECKSUM: ff9b58f6e47436401020604a96c8532a8a90b565
 
 COCOAPODS: 1.8.4

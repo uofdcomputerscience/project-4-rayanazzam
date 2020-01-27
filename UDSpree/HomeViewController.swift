@@ -1,36 +1,34 @@
 //
-//  HomeViewController.swift
+//  FurnitureViewController.swift
 //  UDSpree
 //
-//  Created by Rayan Ahmed on 12/15/19.
-//  Copyright © 2019 Rayan Ahmed. All rights reserved.
+//  Created by Rayan Ahmed on 1/26/20.
+//  Copyright © 2020 Rayan Ahmed. All rights reserved.
 //
 
 import UIKit
-import Parse
 
 class HomeViewController: UIViewController {
     var items: [Item] = []
     let service = ItemService()
     private let refreshControl = UIRefreshControl()
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var tvItemsList: UITableView!
+    
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
-        tvItemsList.delegate = self
-        tvItemsList.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         fetchItems()
         
         if #available(iOS 10.0, *) {
-            tvItemsList.refreshControl = refreshControl
+                 collectionView.refreshControl = refreshControl
         } else {
-            tvItemsList.addSubview(refreshControl)
+                 collectionView.addSubview(refreshControl)
         }
-        
-         refreshControl.addTarget(self, action: #selector(refreshItemList(_:)), for: .valueChanged)
+             
+        refreshControl.addTarget(self, action: #selector(refreshItemList(_:)), for: .valueChanged)
     }
     
     @objc private func refreshItemList(_ sender: Any) {
@@ -39,34 +37,45 @@ class HomeViewController: UIViewController {
     }
     
     func fetchItems() {
-        service.fetchItems { [weak self] (items) in
+        service.fetchItems (constraint: ""){ [weak self] (items) in
             DispatchQueue.main.async {
             self!.items = items
-            self!.tvItemsList.reloadData()
+            self!.collectionView.reloadData()
             }
         }
     }
-
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items.count
+extension HomeViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       let selectedRow = items [indexPath.item]
+        let detail = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
+       detail.item = selectedRow
+       
+       navigationController?.pushViewController(detail, animated: true)
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
+    
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCellP", for: indexPath) as! ItemCellP
         cell.configure(item: items[indexPath.item])
+        cell.layer.cornerRadius = 8.0
         return cell
     }
     
-    func tableView (_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        let selectedRow = items [indexPath.item]
-        let detail = storyboard?.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
-        detail.item = selectedRow
-        
-        navigationController?.pushViewController(detail, animated: true)
-    }
 }
 
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 300)
+    }
+    
 
+}

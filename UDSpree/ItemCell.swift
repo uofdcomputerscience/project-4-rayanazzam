@@ -24,6 +24,16 @@ class ItemCell: UITableViewCell {
         lblPrice.text = (item.itemPrice! + " $")
     }
     
+    @IBOutlet weak var containerView: UIView! {
+        didSet {
+            // Make it card-like
+            containerView.layer.cornerRadius = 10
+            containerView.layer.shadowOpacity = 1
+            containerView.layer.shadowRadius = 4.0
+            containerView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        }
+            
+    }
 }
 
 

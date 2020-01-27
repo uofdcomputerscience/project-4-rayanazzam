@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1B12B15A0D039CB1DEE320A7 /* Pods_UDSpree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFB8BE5D122FD221447E478 /* Pods_UDSpree.framework */; };
+		4D3AA13C23DD9C97000B4D91 /* ElectronicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA13B23DD9C97000B4D91 /* ElectronicsViewController.swift */; };
+		4D3AA13E23DD9EE1000B4D91 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3AA13D23DD9EE1000B4D91 /* OtherViewController.swift */; };
+		4D3BBFE323DD3CB900B7CDA6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3BBFE223DD3CB900B7CDA6 /* SignUpViewController.swift */; };
+		4D3BBFE723DD610200B7CDA6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3BBFE623DD610200B7CDA6 /* BaseViewController.swift */; };
+		4D3BBFE923DD81BD00B7CDA6 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3BBFE823DD81BD00B7CDA6 /* BooksViewController.swift */; };
+		4D3C4C8023DD85DC00260AEC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3C4C7F23DD85DC00260AEC /* HomeViewController.swift */; };
+		4D3C4C8223DD873300260AEC /* ItemCellP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3C4C8123DD873300260AEC /* ItemCellP.swift */; };
 		4D84892323A9CEFB00CE1373 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892223A9CEFB00CE1373 /* DetailViewController.swift */; };
 		4D84892523A9DDB700CE1373 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892423A9DDB700CE1373 /* SellViewController.swift */; };
 		4D84892723AA147100CE1373 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84892623AA147100CE1373 /* WishListViewController.swift */; };
@@ -24,7 +31,7 @@
 		4DEE9EA023A6C40A0072FA35 /* UDSpreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9E9F23A6C40A0072FA35 /* UDSpreeUITests.swift */; };
 		4DEE9EAE23A6C8830072FA35 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EAD23A6C8830072FA35 /* LogInViewController.swift */; };
 		4DEE9EB423A6CCC10072FA35 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EB323A6CCC10072FA35 /* TabBarController.swift */; };
-		4DEE9EB623A6CEE90072FA35 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EB523A6CEE90072FA35 /* HomeViewController.swift */; };
+		4DEE9EB623A6CEE90072FA35 /* FurnitureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EB523A6CEE90072FA35 /* FurnitureViewController.swift */; };
 		4DEE9EB823A6D9A70072FA35 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EB723A6D9A70072FA35 /* ItemCell.swift */; };
 		4DEE9EBA23A6DB460072FA35 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EB923A6DB460072FA35 /* Item.swift */; };
 		4DEE9EBE23A70E220072FA35 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE9EBD23A70E220072FA35 /* ItemService.swift */; };
@@ -51,6 +58,13 @@
 
 /* Begin PBXFileReference section */
 		04D7B0277AB19635DF596636 /* Pods-UDSpreeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDSpreeTests.release.xcconfig"; path = "Target Support Files/Pods-UDSpreeTests/Pods-UDSpreeTests.release.xcconfig"; sourceTree = "<group>"; };
+		4D3AA13B23DD9C97000B4D91 /* ElectronicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectronicsViewController.swift; sourceTree = "<group>"; };
+		4D3AA13D23DD9EE1000B4D91 /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		4D3BBFE223DD3CB900B7CDA6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4D3BBFE623DD610200B7CDA6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4D3BBFE823DD81BD00B7CDA6 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		4D3C4C7F23DD85DC00260AEC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4D3C4C8123DD873300260AEC /* ItemCellP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellP.swift; sourceTree = "<group>"; };
 		4D84892223A9CEFB00CE1373 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4D84892423A9DDB700CE1373 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		4D84892623AA147100CE1373 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +87,7 @@
 		4DEE9EA123A6C40A0072FA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DEE9EAD23A6C8830072FA35 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4DEE9EB323A6CCC10072FA35 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		4DEE9EB523A6CEE90072FA35 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4DEE9EB523A6CEE90072FA35 /* FurnitureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureViewController.swift; sourceTree = "<group>"; };
 		4DEE9EB723A6D9A70072FA35 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		4DEE9EB923A6DB460072FA35 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4DEE9EBD23A70E220072FA35 /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
@@ -172,7 +186,7 @@
 				4DEE9E8B23A6C40A0072FA35 /* Info.plist */,
 				4DEE9EAD23A6C8830072FA35 /* LogInViewController.swift */,
 				4DEE9EB323A6CCC10072FA35 /* TabBarController.swift */,
-				4DEE9EB523A6CEE90072FA35 /* HomeViewController.swift */,
+				4DEE9EB523A6CEE90072FA35 /* FurnitureViewController.swift */,
 				4DEE9EB723A6D9A70072FA35 /* ItemCell.swift */,
 				4DEE9EB923A6DB460072FA35 /* Item.swift */,
 				4DEE9EBD23A70E220072FA35 /* ItemService.swift */,
@@ -180,6 +194,13 @@
 				4D84892423A9DDB700CE1373 /* SellViewController.swift */,
 				4D84892623AA147100CE1373 /* WishListViewController.swift */,
 				4DB92DB523AAD6D5003F0018 /* ProfileViewController.swift */,
+				4D3BBFE223DD3CB900B7CDA6 /* SignUpViewController.swift */,
+				4D3BBFE623DD610200B7CDA6 /* BaseViewController.swift */,
+				4D3BBFE823DD81BD00B7CDA6 /* BooksViewController.swift */,
+				4D3C4C7F23DD85DC00260AEC /* HomeViewController.swift */,
+				4D3C4C8123DD873300260AEC /* ItemCellP.swift */,
+				4D3AA13B23DD9C97000B4D91 /* ElectronicsViewController.swift */,
+				4D3AA13D23DD9EE1000B4D91 /* OtherViewController.swift */,
 			);
 			path = UDSpree;
 			sourceTree = "<group>";
@@ -452,20 +473,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D84892323A9CEFB00CE1373 /* DetailViewController.swift in Sources */,
+				4D3AA13E23DD9EE1000B4D91 /* OtherViewController.swift in Sources */,
 				4DB92DB423AAD070003F0018 /* MyTextField.swift in Sources */,
-				4DEE9EB623A6CEE90072FA35 /* HomeViewController.swift in Sources */,
+				4DEE9EB623A6CEE90072FA35 /* FurnitureViewController.swift in Sources */,
 				4DEE9EAE23A6C8830072FA35 /* LogInViewController.swift in Sources */,
 				4DEE9EB823A6D9A70072FA35 /* ItemCell.swift in Sources */,
 				4DEE9E7E23A6C4090072FA35 /* AppDelegate.swift in Sources */,
 				4DEE9EBE23A70E220072FA35 /* ItemService.swift in Sources */,
+				4D3AA13C23DD9C97000B4D91 /* ElectronicsViewController.swift in Sources */,
+				4D3C4C8023DD85DC00260AEC /* HomeViewController.swift in Sources */,
+				4D3BBFE723DD610200B7CDA6 /* BaseViewController.swift in Sources */,
+				4D3C4C8223DD873300260AEC /* ItemCellP.swift in Sources */,
 				4DB92DB123AACE9F003F0018 /* SignUpButton.swift in Sources */,
 				4DEE9EBA23A6DB460072FA35 /* Item.swift in Sources */,
 				4D84892723AA147100CE1373 /* WishListViewController.swift in Sources */,
+				4D3BBFE323DD3CB900B7CDA6 /* SignUpViewController.swift in Sources */,
 				4D84892523A9DDB700CE1373 /* SellViewController.swift in Sources */,
 				4DEE9EB423A6CCC10072FA35 /* TabBarController.swift in Sources */,
 				4DB92DB623AAD6D5003F0018 /* ProfileViewController.swift in Sources */,
 				4DEE9E8023A6C4090072FA35 /* SceneDelegate.swift in Sources */,
 				4DB92DAD23AACC06003F0018 /* LogInButton.swift in Sources */,
+				4D3BBFE923DD81BD00B7CDA6 /* BooksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHD942MGNV;
 				INFOPLIST_FILE = UDSpree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,6 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KHD942MGNV;
 				INFOPLIST_FILE = UDSpree/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

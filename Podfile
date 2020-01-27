@@ -7,7 +7,8 @@ target 'UDSpree' do
 
   # Pods for UDSpree
   
-  pod 'Parse' 
+  pod 'Parse'
+  pod 'CarbonKit' 
 
   target 'UDSpreeTests' do
     inherit! :search_paths

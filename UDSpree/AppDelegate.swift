@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         Parse.initialize(with: parseConfig)
         
-        UITabBar.appearance().barTintColor = .black
-        UITabBar.appearance().tintColor = .red
+        UITabBar.appearance().barTintColor = .white
+        UITabBar.appearance().tintColor = .blue
         return true
     }
 

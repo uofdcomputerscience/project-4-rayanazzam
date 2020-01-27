@@ -20,6 +20,11 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if PFUser.current() != nil {
+            goToHomePage()
+        }
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         setBackground()
     }
     
@@ -33,6 +38,7 @@ class LogInViewController: UIViewController {
            PFUser.logInWithUsername(inBackground: username, password:password) {
              (user, error) -> Void in
              if user != nil {
+                self.clearFields()
                self.goToHomePage()
              } else {
                 //todo better error handling
@@ -42,26 +48,10 @@ class LogInViewController: UIViewController {
        }
     }
     @IBAction func onSignUp(_ sender: Any) {
-        let username = tfUsername.text!
-        let password = tfPassword.text!
         
-        if (!isValidInput(text: username) || !isValidInput(text: password)) {
-            //todo better error handling
-            displayErrorMessage()
-        } else {
-            
-            user.username = username
-            user.password = password
-            
-            user.signUpInBackground { (successful, error) in
-                if successful {
-                    self.goToHomePage()
-                } else {
-                    //todo better error handling
-                    self.displayErrorMessage()
-                }
-            }
-        }
+        let signUp = storyboard?.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
+        navigationController?.pushViewController(signUp, animated: true)
+        
     }
     
     func displayErrorMessage () {
@@ -82,8 +72,6 @@ class LogInViewController: UIViewController {
     }
     
     func goToHomePage () {
-        tfUsername.text = ""
-        tfPassword.text = ""
         let viewController = storyboard?.instantiateViewController(identifier: "TabBarController") as! TabBarController
         present(viewController, animated: true)
     }
@@ -99,6 +87,11 @@ class LogInViewController: UIViewController {
         backgroundImageView.image = UIImage(named: "bg2")
         view.sendSubviewToBack(backgroundImageView)
         
+    }
+    
+    func clearFields () {
+        tfUsername.text = ""
+        tfPassword.text = ""
     }
 }
 
